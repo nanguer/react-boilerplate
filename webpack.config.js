@@ -1,10 +1,18 @@
 const path = require("path");
 const webpack = require("webpack");
 HtmlWebpackPlugin = require("html-webpack-plugin");
+MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
-  mode: "development",
+  //mode: "development",
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/template.html"
+    }),
+    new MiniCssExtractPlugin()
+  ],
   module: {
     rules: [
       {
@@ -15,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       }
     ]
   },
@@ -25,20 +33,13 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "public"),
-    //publicPath: "/public",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[hash].js",
+    publicPath: "/"
   },
   devServer: {
-    contentBase: "/public",
+    contentBase: "/public/assets",
     port: 3000,
-    publicPath: "/",
     hotOnly: true
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/template.html"
-    })
-  ]
+  }
 };

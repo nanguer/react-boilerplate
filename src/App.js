@@ -4,7 +4,7 @@ import Child from "./components/Child";
 import "./styles/styles.scss";
 
 const App = () => {
-  return <Child name={"Nahuel"} lastName={"Gimenez"} />;
+  return <Child />;
 };
 
 export default hot(module)(App);
