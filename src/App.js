@@ -1,10 +1,16 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import Child from "./components/Child";
+import AppBody from "./components/AppBody";
+import NavMenu from "./components/NavMenu";
 import "./styles/styles.scss";
 
 const App = () => {
-  return <Child />;
+  return (
+    <>
+      <NavMenu />
+      <AppBody />
+    </>
+  );
 };
 
 export default hot(module)(App);

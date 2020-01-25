@@ -1,13 +1,15 @@
-#root {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.app {
-  color: steelblue;
+body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
+}
+
+div.app {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.app-body {
+  color: steelblue;
+  display: inline-flex;
+  flex-direction: column;
 }
