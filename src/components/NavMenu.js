@@ -1,5 +1,3 @@
-import React from "react";
+import React from 'react';
 
-export default () => {
-  return <div className="navmenu">NavMenu Component</div>;
-};
+export default () => <div className='navmenu'>NavMenu Component</div>;

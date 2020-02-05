@@ -1,0 +1,5 @@
+{
+    "prettier.jsxSingleQuote": true,
+    "prettier.endOfLine": "lf",
+    "prettier.singleQuote": true
+}
