@@ -4,7 +4,7 @@ export default () => {
   const name = 'is Working!';
 
   return (
-    <div className='app-body'>
+    <div className="app-body">
       <div>
         <h1>React Application Boilerplate</h1>
       </div>
