@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb", "airbnb/hooks", "prettier"],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "react-hooks"],
   "parser": "babel-eslint",
   "env": {
     "node": true,
@@ -8,6 +8,8 @@
     "es6": true
   },
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "comma-dangle": ["error", "never"],
     "no-unused-vars": [
       "error",

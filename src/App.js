@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import AppBody from './components/AppBody';
